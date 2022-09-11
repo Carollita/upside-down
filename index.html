@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mundo Invertido | Semana Front-end</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon/stranger-things-icon.png"/>
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
 
@@ -12,7 +13,7 @@
     <header>
       <!-- !Chrome no longer allows audio autoplay and video autoplay with sound. -->
       <audio id="music" autoplay>
-        <source src="assets/musics/normal-world.mpeg"/>
+        <source src="assets/audios/normal-world.mpeg"/>
       </audio>
 
       <div class="header-content">
@@ -106,7 +107,7 @@
           <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo<span></span></h3>
 
           <div class="form-container">
-            <form action="">
+            <form>
               <label for="txtName">Nome Completo</label>
               <input type="text" name="name" id="txtName">
 
@@ -114,12 +115,12 @@
               <input type="email" name="email" id="txtEmail">
 
               <label for="txtLevel">Level</label>
-              <input type="text" name="level" id="txtLevel">
+              <input type="number" name="level" id="txtLevel">
 
               <label for="txtCharacter">Personagem</label>
               <textarea name="character" cols="30" rows="10" id="txtCharacter"></textarea>
             
-              <button>Me inscrever</button>
+              <button type="button" id="btnSubscribe">Me inscrever</button>
             </form>
           </div>
         </div>
@@ -134,20 +135,7 @@
       <img src="assets/images/footer/logo.svg" alt="Logo Digital Innovation One">
     </footer>    
     
-    <script>
-      function switchTheme() {
-        document.body.classList.toggle('dark-theme');
-        document.body.classList.toggle('light-theme');
-
-        const theme = document.body.classList[0];
-        const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg'
-        //if theme equal light-theme play normal-world.mpeg, else play inverted-world.mpeg
-
-        const audio = document.getElementById('music');
-        audio.src = `assets/musics/${music}`;
-        audio.play();
-        audio.volume = 0.2;
-      }
-    </script>
+    <script src="assets/js/index.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>

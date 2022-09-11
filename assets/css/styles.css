@@ -27,8 +27,6 @@
   --filter-top-image: invert(0%) sepia(0%) saturate(5433%) hue-rotate(134deg) brightness(104%) contrast(121%);
   --character-bottom-image-src: url("../images/characters/inverted-world-monster.svg");
   --filter-bottom-image: invert(30%) sepia(0%) saturate(5433%) hue-rotate(134deg) brightness(104%) contrast(121%);
-  /*--character-top-image-color: #ffffff;*/
-  /*--character-bottom-image-color: #e5e5e5;*/
   --background-lamp-image: url("../images/backgrounds/lamps.png");
   --footer-background-color: #b5bbbf;
 }
@@ -48,8 +46,6 @@
   --filter-bottom-image: invert(85%) sepia(0%) saturate(5433%) hue-rotate(134deg) brightness(104%) contrast(121%);
   --character-top-image-src: url("../images/characters/inverted-world-monster.svg");
   --filter-top-image: invert(100%) sepia(0%) saturate(5433%) hue-rotate(134deg) brightness(104%) contrast(121%);
-  /*--character-bottom-image-color: rgba(255, 255, 255, 0.1);*/
-  /*--character-top-image-color: #000;*/
   --background-lamp-image: url("../images/backgrounds/lamps-inverted.png");
   --footer-background-color: #000;
 }
@@ -170,25 +166,6 @@ header::before {
   background: var(--character-bottom-image-src) bottom / contain no-repeat;
   filter: var(--filter-bottom-image);
 }
-
-/* !webkit-mask does not work for me
-.world-characters#top-characters {
-  height: 100%;
-  background-color: var(--character-top-image-color);
-  mask: var(--character-top-image-src) bottom / 100% no-repeat;
-  -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
-}
-
-.world-characters#bottom-characters {
-  height: 500px;
-  background-color: var(--character-bottom-image-color);
-  top: 3px;
-  transform: rotateZ(180deg) scaleX(-1);
-  position: relative;
-  mask: var(--character-bottom-image-src) bottom / contain no-repeat;
-  -webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
-}
-*/
 
 /***  MAIN and SECTIONS STYLES ***/
 
